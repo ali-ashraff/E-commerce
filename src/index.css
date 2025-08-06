@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import '@fontsource-variable/outfit';
+
+
+
+
+@layer components{
+  .afterEffect{
+    @apply after:absolute after:left-0 after:h-0.5 after:bottom-0 after:w-0 after:transition-[Width] after:duration-500 hover:after:w-full after:bg-green-600
+  }
+  .linkHover{
+    @apply hover:text-green-600 hover:font-extrabold transition-all duration-100 text-4xl
+  }
+  .btn{
+    @apply px-2.5 py-2 hover:bg-gray-300 flex justify-between items-center transition-all hover:text-white 
+  }
+}
+
+
+
+@theme{
+  --color-mainlight:#F0F3F2;
+  --color-primary:#00CC74;
+  --color-darkprimary:#01854C;
+}
+
+
+
+
+.containerr{
+width: 80%;
+}
+
+
+body{
+  font-family: 'Outfit Variable', sans-serif;
+}
+
+
+
+.loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #01854C;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-left: 4px solid #00CC74;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
