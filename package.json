@@ -5,13 +5,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-"deploy": "gh-pages -d build",
-    "dev": "vite",
+  "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "postbuild": "cp build/index.html build/404.html"
+      "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  "postbuild": "copy dist\\index.html dist\\404.html"
+    
   },
   "dependencies": {
     "@fontsource-variable/outfit": "^5.2.6",
