@@ -6,7 +6,7 @@
   
   "version": "0.0.0",
   
-  "homepage": "https://ali-ashraff.github.io/E-commerce",
+
   
   "type": "module",
   
@@ -22,7 +22,7 @@
   "predeploy": "npm run build",
   
     
-  "deploy": "gh-pages -d build",
+  
   
     
   "lint": "eslint .",
